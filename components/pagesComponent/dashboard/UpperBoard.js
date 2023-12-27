@@ -32,12 +32,12 @@ import { SlArrowRight } from "react-icons/sl";
 
 const UpperBoard = () => {
   return (
-    <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+    <Grid templateColumns={{ lg: "repeat(3, 1fr)" }} gap={6}>
       <GridItem
         boxShadow={"md"}
         borderRadius={"md"}
         // w={"856px"}
-        h={"325px"}
+        // h={"325px"}
         colSpan={2}
         bg={"#fff"}
         py={"2em"}
@@ -56,14 +56,15 @@ const UpperBoard = () => {
               borderColor={"#CBCBCB"}
               border={"1px"}
               color={"#CBCBCB"}
-              borderRadius={"md"}
+              borderRadius={"lg"}
               // justifyContent={"center"}
               alignSelf={"center"}
-              py={"0.5em"}
-              px={"1em"}
+              py={"1em"}
+              px={"2.5em"}
+              fontSize={"12px"}
               // h={"46px"}
             >
-              View Transaction
+              View Transactions
             </Box>
           </Flex>
           <Stack
@@ -88,7 +89,7 @@ const UpperBoard = () => {
           </Stack>
           <Divider color={"#E4E4E4"} bg={"#E4E4E4"} />
 
-          <Flex px={".2em"}>
+          <Flex pr={"2em"} direction={{ lg: "column", xl: "row" }}>
             <Stack
               w={"100%"}
               justify={"space-between"}
@@ -150,7 +151,7 @@ const UpperBoard = () => {
                 borderColor={"#CBCBCB"}
                 py={".5em"}
                 pl={".5em"}
-                w={"189px"}
+                w={"100%"}
                 h={"73px"}
               >
                 <StatNumber fontSize={"20px"} color={"#4545FE"}>
@@ -173,7 +174,7 @@ const UpperBoard = () => {
                 borderColor={"#CBCBCB"}
                 py={".5em"}
                 pl={".5em"}
-                w={"189px"}
+                w={"100%"}
                 h={"73px"}
               >
                 <StatNumber fontSize={"20px"} color={"#12D8A0"}>
@@ -196,7 +197,7 @@ const UpperBoard = () => {
                 borderColor={"#CBCBCB"}
                 py={".5em"}
                 pl={".5em"}
-                w={"189px"}
+                w={"100%"}
                 h={"73px"}
               >
                 <StatNumber fontSize={"20px"} color={"#191919"}>
@@ -219,7 +220,7 @@ const UpperBoard = () => {
                 borderColor={"#CBCBCB"}
                 py={".5em"}
                 pl={".5em"}
-                w={"189px"}
+                w={"100%"}
                 h={"73px"}
               >
                 <StatNumber fontSize={"20px"} color={"#FF6A6A"}>
@@ -249,8 +250,8 @@ const UpperBoard = () => {
       // bg={"#F5F5F5"}
       // py={"2em"}
       >
-        <Stack spacing={2.5}>
-          <Card h={"157px"} boxShadow={"md"}>
+        <Stack spacing={2.5} h={"100%"}>
+          <Card h={"100%"} boxShadow={"md"}>
             <CardHeader p={"1em"}>
               <Flex justify={"space-between"} align={"center"}>
                 <Stack direction={"row"} align={"center"}>
@@ -312,7 +313,7 @@ const UpperBoard = () => {
             <Button>View here</Button>
           </CardFooter> */}
           </Card>
-          <Card h={"157px"} boxShadow={"md"}>
+          <Card h={"100%"} boxShadow={"md"}>
             <CardHeader p={"1em"}>
               <Flex justify={"space-between"} align={"center"}>
                 <Stack direction={"row"} align={"center"}>

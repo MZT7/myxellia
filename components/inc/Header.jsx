@@ -39,9 +39,9 @@ import {
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
-const Header = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef();
+const Header = ({ onOpen, btnRef }) => {
+  // const { isOpen, onOpen, onClose } = useDisclosure();
+  // const btnRef = React.useRef();
   const [value, onChange] = useState(new Date());
   return (
     <>
@@ -107,7 +107,7 @@ const Header = () => {
         <Flex
           w={{ base: "100%" }}
           h="67px"
-          bg=""
+          display={{ base: "none", lg: "flex" }}
           justifyContent={"space-between"}
           px="7em"
           align={"center"}
@@ -192,34 +192,6 @@ const Header = () => {
           {/* <Box>Header</Box> */}
         </Flex>
       </Box>
-      <Drawer
-        isOpen={isOpen}
-        placement="right"
-        onClose={onClose}
-        finalFocusRef={btnRef}
-        size={"sm"}
-      >
-        <DrawerOverlay />
-        <DrawerContent bg={"black"} color={"white"}>
-          <DrawerCloseButton />
-          <DrawerHeader>Calender</DrawerHeader>
-
-          <DrawerBody>
-            <Calendar
-              onChange={onChange}
-              className=" w-full !bg-black text-slate-500 !border-none !outline-none"
-              value={value}
-            />
-          </DrawerBody>
-
-          <DrawerFooter>
-            {/* <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme="blue">Save</Button> */}
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
     </>
   );
 };

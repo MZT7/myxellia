@@ -30,7 +30,7 @@ import { SlArrowRight } from "react-icons/sl";
 
 const LowerBoard = () => {
   return (
-    <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+    <Grid templateColumns={{ lg: "repeat(3, 1fr)" }} gap={6}>
       <GridItem boxShadow={"md"} borderRadius={"md"}>
         <Card>
           <CardHeader>
