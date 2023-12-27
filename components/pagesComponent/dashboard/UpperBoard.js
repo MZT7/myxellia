@@ -12,6 +12,7 @@ import {
   GridItem,
   Heading,
   SimpleGrid,
+  Spacer,
   Stack,
   Stat,
   StatHelpText,
@@ -25,6 +26,8 @@ import Increase from "../../../asset/Images/Increase.svg";
 import IncreaseR from "../../../asset/Images/IncreaseR.svg";
 import ProfileP from "../../../asset/Images/ProfileP.svg";
 import HomeP from "../../../asset/Images/HomeP.svg";
+import DirectionR from "../../../asset/Images/DirectionR.svg";
+import DirectionL from "../../../asset/Images/DirectionL.svg";
 import { SlArrowRight } from "react-icons/sl";
 
 const UpperBoard = () => {
@@ -84,8 +87,63 @@ const UpperBoard = () => {
             </Text>
           </Stack>
           <Divider color={"#E4E4E4"} bg={"#E4E4E4"} />
-          <Flex justify={"end"} px={"2em"}>
-            <SimpleGrid columns={2} spacing={3}>
+
+          <Flex px={".2em"}>
+            <Stack
+              w={"100%"}
+              justify={"space-between"}
+              align={"center"}
+              direction={"row"}
+              px={".5em"}
+            >
+              <Box bg={"#E4E4E4"} cursor={"pointer"} borderRadius={"full"}>
+                <Image src={DirectionL} alt="l" />
+              </Box>
+
+              <Stack w={"80%"} h={"100%"}>
+                <Box
+                  w={"100%"}
+                  h={"100%"}
+                  className=" sha"
+                  boxShadow={"inner"}
+                ></Box>
+                <Divider />
+                <Stack direction={"row"} justify={"space-evenly"}>
+                  <Text fontSize={"10px"} fontWeight={500} color={"#919191"}>
+                    Jan
+                  </Text>
+                  <Text fontSize={"10px"} fontWeight={500} color={"#919191"}>
+                    Feb
+                  </Text>
+                  <Text fontSize={"10px"} fontWeight={500} color={"#919191"}>
+                    Mar
+                  </Text>
+                  <Text fontSize={"10px"} fontWeight={500} color={"#919191"}>
+                    Apr
+                  </Text>
+                  <Text fontSize={"10px"} fontWeight={500} color={"#919191"}>
+                    May
+                  </Text>
+                  <Text fontSize={"10px"} fontWeight={500} color={"#919191"}>
+                    Jun
+                  </Text>
+                  <Text fontSize={"10px"} fontWeight={500} color={"#919191"}>
+                    Jul
+                  </Text>
+                  <Text fontSize={"10px"} fontWeight={500} color={"#919191"}>
+                    Aug
+                  </Text>
+                  <Text fontSize={"10px"} fontWeight={500} color={"#919191"}>
+                    Sep
+                  </Text>
+                </Stack>
+              </Stack>
+              <Box bg={"#E4E4E4"} cursor={"pointer"} borderRadius={"full"}>
+                <Image src={DirectionR} alt="r" />{" "}
+              </Box>
+            </Stack>
+            <Spacer />
+            <SimpleGrid w={"100%"} columns={2} spacing={3}>
               <Stat
                 border={"1px"}
                 borderRadius={"xl"}
