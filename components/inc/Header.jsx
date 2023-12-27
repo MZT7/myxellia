@@ -61,7 +61,9 @@ const Header = () => {
               src={logo}
               alt="Dan"
             />
-            <Text fontSize={"14px"}>For Mainstone</Text>
+            <Text fontSize={"14px"} fontFamily={"Proxima Nova"}>
+              For Mainstone
+            </Text>
           </Box>
           <Box>
             <Flex columnGap={"2.5em"}>
