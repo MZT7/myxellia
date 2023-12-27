@@ -8,7 +8,7 @@ import LowerBoard from "./LowerBoard";
 const Dashboard = () => {
   return (
     <>
-      <Stack px={"7em"} py={"2em"}>
+      <Stack px={"7em"} py={"2em"} fontFamily={"Euclid Circular B"}>
         <Box>
           <Stack direction={"row"}>
             <Image src={hand} alt="hand" />
